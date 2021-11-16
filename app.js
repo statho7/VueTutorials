@@ -1,11 +1,12 @@
 const app = Vue.createApp({
     data() {
         return{
+            url: "https://www.stathopoulosandreas.com",
             showBooks: true,
             books: [
-                { title: "to be or not to be", author: "yolo"},
-                { title: "tobetobetobe", author: "lolo"},
-                { title: "doobe doobe doooo", author: "lol"},
+                { title: "to be or not to be", author: "yolo", img: 'assets/1.jpg'},
+                { title: "tobetobetobe", author: "lolo", img: 'assets/1.jpg'},
+                { title: "doobe doobe doooo", author: "lol", img: 'assets/1.jpg'},
             ]
             // title: 'The Final Empire',
             // author: 'Brandon Sanderson',

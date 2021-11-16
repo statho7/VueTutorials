@@ -21,15 +21,14 @@
     <h1>Hello Vue!</h1>
 
     <div id="app">
-        <button @click="toggleShowBooks">
-            <span v-if="showBooks">Hide books</span>
-            <span v-else>Show books</span>
-        </button>
+        <!-- attribute binding -->
+        <a v-bind:href="url">Best website ever!</a>
 
         <!-- <div v-show=showBooks>currently showing books</div> -->
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in books">
+                    <img :src="book.img" :alt="book.title" >
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}
                 </li>
@@ -37,10 +36,10 @@
             <!-- <p>{{ title }}, {{ author }}, {{ age }}</p> -->
         </div>
 
-        <!-- <br>
+        <!-- <br> -->
 
         <!-- mouse events -->
-        <div class="box" @mouseover="handleEvent($event, 5)">
+        <!-- <div class="box" @mouseover="handleEvent($event, 5)">
             mouseover
         </div>
         <div class="box" @mouseleave="handleEvent">
@@ -53,6 +52,11 @@
             position - {{ x }} {{ y }}
         </div> -->
         <!-- <h2>{{ title }}, {{ author }}, {{ age }}</h2>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide books</span>
+            <span v-else>Show books</span>
+        </button>
 
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
